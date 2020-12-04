@@ -11,7 +11,7 @@ jobs:
       - name: Cloning RISC-V toolchain
         run: git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
       - name: Compressing all cloned folders
-        run: zip -r riscv_gnu_pack.zip .
+        run: zip -r riscv_gnu_pack.zip . && ls && pwd
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
